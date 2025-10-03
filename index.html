@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ilaaz Healthcare at Home</title>
+  <style>
+    :root{--accent:#0b6efd;--muted:#666}
+    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;color:#111;line-height:1.45}
+    header{background:#f7f9ff;padding:28px 16px;box-shadow:0 1px 6px rgba(0,0,0,.04)}
+    .container{max-width:980px;margin:0 auto;padding:0 16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:56px;height:56px;object-fit:contain;border-radius:8px;background:#fff;padding:6px}
+    nav{margin-left:auto}
+    nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:600}
+    .hero{display:flex;gap:24px;align-items:center;padding:48px 0}
+    .hero .left{flex:1}
+    h1{font-size:28px;margin:6px 0}
+    p.lead{color:var(--muted);margin:14px 0 22px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;background:var(--accent);color:#fff;font-weight:700}
+    .card-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:26px 0}
+    .card{padding:16px;border-radius:10px;border:1px solid #eee;background:#fff}
+    footer{border-top:1px solid #eee;padding:20px 0;color:var(--muted);font-size:14px;margin-top:40px}
+    @media(max-width:720px){h1{font-size:22px}.hero{flex-direction:column;align-items:flex-start}.brand img{width:48px;height:48px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center">
+      <div class="brand">
+        <img src="https://placehold.co/56x56/0b6efd/fff?text=I" alt="Ilaaz Logo">
+        <div>
+          <strong>Ilaaz</strong><br>
+          <small style="color:var(--muted)">Healthcare at Home</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="left">
+        <h1>Trusted Healthcare at Your Doorstep</h1>
+        <p class="lead">From physiotherapy to elder care, saline, dressing, and daily health checkups — Ilaaz brings healthcare directly to your home.</p>
+        <a class="btn" href="#contact">Book a Visit</a>
+      </div>
+      <div style="width:320px;max-width:40%">
+        <img alt="Healthcare service" style="width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(13,38,76,.08)" src="https://placehold.co/600x400?text=Ilaaz+Healthcare">
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="card-list">
+        <div class="card">
+          <strong>Physiotherapy</strong>
+          <p style="color:var(--muted);margin:8px 0 0">Home physiotherapy sessions, rehab, and recovery plans.</p>
+        </div>
+        <div class="card">
+          <strong>Elder Care</strong>
+          <p style="color:var(--muted);margin:8px 0 0">Daily check-ins, medication reminders, and compassionate care.</p>
+        </div>
+        <div class="card">
+          <strong>Home Treatments</strong>
+          <p style="color:var(--muted);margin:8px 0 0">Dressing, saline, BP & sugar checks, and basic nursing procedures.</p>
+        </div>
+        <div class="card">
+          <strong>Teleconsultation</strong>
+          <p style="color:var(--muted);margin:8px 0 0">Connect with doctors online for quick medical advice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p style="color:var(--muted)">Ilaaz is a Dhanbad-based healthcare service designed to make home treatment simple and accessible. Backed by doctors, pharmacists, and physiotherapists with years of experience, we ensure reliable and affordable care at home.</p>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h2>Contact</h2>
+      <p style="color:var(--muted);margin-bottom:12px">📞 Call / WhatsApp: <strong><a href="tel:+917004903739">+91 7004903739</a></strong></p>
+      <p>✉️ Email: <a href="mailto:thevikash08@gmail.com">thevikash08@gmail.com</a></p>
+      <p style="margin-top:12px;color:var(--muted)">Or send a WhatsApp message: <br><code>Hi, I want to book a home healthcare service from Ilaaz.</code></p>
+    </section>
+
+    <footer>
+      <div class="container">© <span id="year"></span> Ilaaz Healthcare · ilaaz.co.in · Dhanbad</div>
+    </footer>
+  </main>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

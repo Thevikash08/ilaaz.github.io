@@ -1,131 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ilaaz - Healthcare at Home</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ilaaz Healthcare at Home | Home</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #0066cc;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-style: italic;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1588776814546-46e74f3f3b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=60') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-    }
-    .hero button {
-      background: #ff9900;
-      color: white;
-      border: none;
-      padding: 15px 25px;
-      margin-top: 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 8px;
-    }
-    .services {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .services h2 {
-      margin-bottom: 20px;
-    }
-    .service-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .card h3 {
-      margin-top: 0;
-    }
-    .contact {
-      background: #0066cc;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .contact a {
-      display: inline-block;
-      background: #25d366;
-      color: white;
-      padding: 12px 20px;
-      margin-top: 15px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #333;
-      color: white;
-      font-size: 0.9rem;
-    }
+    :root{--accent:#00b0b8;--muted:#666;--dark-blue:#0b6efd}
+    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;color:#111;line-height:1.45}
+    header{background:#fff;padding:18px 16px;box-shadow:0 2px 8px rgba(0,0,0,.08); position: sticky; top: 0; z-index: 100;} /* Sticky Header */
+    .container{max-width:980px;margin:0 auto;padding:0 16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:48px;height:48px;object-fit:contain;border-radius:8px;background:var(--accent);padding:4px} /* Smaller Logo, Accent Background */
+    nav{margin-left:auto}
+    nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:600}
+    .hero{display:flex;gap:24px;align-items:center;padding:48px 0}
+    .hero .left{flex:1}
+    h1{font-size:28px;margin:6px 0}
+    p.lead{color:var(--muted);margin:14px 0 22px}
+    .btn{display:inline-block;padding:12px 20px;border-radius:8px;text-decoration:none;background:var(--accent);color:#fff;font-weight:700;font-size:16px;} /* Bigger CTA Button */
+    .card-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:26px 0} /* Tighter Grid for Mobile Look */
+    .card{padding:16px;border-radius:12px;border:1px solid #eee;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.05); text-align: center;} /* Enhanced Card Shadow */
+    .card strong {display: block; margin-top: 8px;}
+    .card p {font-size: 13px; margin: 4px 0 0 !important;}
+    .card-icon {color: var(--dark-blue); font-size: 32px; margin-bottom: 4px; display: block;} /* Icon Styling */
+    footer{border-top:1px solid #eee;padding:20px 0;color:var(--muted);font-size:14px;margin-top:40px}
+    @media(max-width:720px){h1{font-size:22px}.hero{flex-direction:column;align-items:flex-start}.brand img{width:48px;height:48px}}
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+  <header>
+    <div class="container" style="display:flex;align-items:center">
+      <div class="brand">
+        <img src="logo.png" alt="Ilaaz Logo"> 
+        <div>
+          <strong>Ilaaz</strong><br>
+          <small style="color:var(--muted)">Healthcare at Home</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>Ilaaz</h1>
-  <p>Healthcare at Home</p>
-</header>
+  <main class="container">
+    <section class="hero">
+      <div class="left">
+        <h1>Trusted Healthcare at Your Doorstep, Just like an App.</h1>
+        <p class="lead">From physiotherapy to elder care, saline, dressing, and daily health checkups — Ilaaz brings healthcare directly to your home in Dhanbad.</p>
+        <a class="btn" href="https://wa.me/917004903739?text=Hi%2C%20I%20want%20to%20book%20a%20home%20healthcare%20service%20from%20Ilaaz.">Book a Home Visit Now</a>
+      </div>
+      <div style="width:320px;max-width:40%">
+        <img alt="Healthcare service" style="width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(13,38,76,.08)" src="hero-image.jpg">
+      </div>
+    </section>
 
-<section class="hero">
-  <h2>Your Health, Our Care</h2>
-  <p>Professional home healthcare services in Dhanbad</p>
-  <button onclick="window.location.href='tel:+917004903739'">📞 Call Now</button>
-</section>
+    <section id="services">
+      <h2>Our Home Services (Tap to Book)</h2>
+      <div class="card-list">
+        
+        <div class="card">
+          <a href="https://wa.me/917004903739?text=Hi%2C%20I%20want%20to%20book%20Physiotherapy%20from%20Ilaaz." style="text-decoration: none; color: inherit;">
+            <i class="fa-solid fa-person-walking card-icon"></i>
+            <strong>Physiotherapy</strong>
+            <p style="color:var(--muted)">Rehab and recovery sessions at home.</p>
+          </a>
+        </div>
+        
+        <div class="card">
+          <a href="https://wa.me/917004903739?text=Hi%2C%20I%20want%20to%20book%20Elder%20Care%20from%20Ilaaz." style="text-decoration: none; color: inherit;">
+            <i class="fa-solid fa-heart-pulse card-icon"></i>
+            <strong>Elder Care</strong>
+            <p style="color:var(--muted)">Daily check-ins, medication, and care.</p>
+          </a>
+        </div>
+        
+        <div class="card">
+          <a href="https://wa.me/917004903739?text=Hi%2C%20I%20want%20to%20book%20Home%20Nursing%20Procedures%20from%20Ilaaz." style="text-decoration: none; color: inherit;">
+            <i class="fa-solid fa-syringe card-icon"></i>
+            <strong>Home Nursing</strong>
+            <p style="color:var(--muted)">Dressing, saline, BP & sugar checks.</p>
+          </a>
+        </div>
+        
+        <div class="card">
+          <a href="https://wa.me/917004903739?text=Hi%2C%20I%20want%20to%20book%20Teleconsultation%20from%20Ilaaz." style="text-decoration: none; color: inherit;">
+            <i class="fa-solid fa-user-doctor card-icon"></i>
+            <strong>Teleconsultation</strong>
+            <p style="color:var(--muted)">Connect with doctors online quickly.</p>
+          </a>
+        </div>
 
-<section class="services">
-  <h2>Our Services</h2>
-  <div class="service-list">
-    <div class="card"><h3>🧑‍⚕️ Physiotherapy</h3><p>Expert physiotherapy care at home.</p></div>
-    <div class="card"><h3>💉 BP & Sugar Check</h3><p>On-call vital monitoring at your doorstep.</p></div>
-    <div class="card"><h3>👵 Elder Care</h3><p>Compassionate support for senior citizens.</p></div>
-    <div class="card"><h3>🩹 Dressing & Saline</h3><p>Safe dressing and IV saline at home.</p></div>
-    <div class="card"><h3>📱 Teleconsultation</h3><p>Consult doctors via phone or video call.</p></div>
-  </div>
-</section>
+      </div>
+    </section>
 
-<section class="contact">
-  <h2>Contact Us</h2>
-  <p>Email: <a href="mailto:thevikash08@gmail.com">thevikash08@gmail.com</a></p>
-  <p>Phone: <a href="tel:+917004903739" style="color:white;">+91 7004903739</a></p>
-  <a href="https://wa.me/917004903739" target="_blank">💬 Chat on WhatsApp</a>
-</section>
+    <section id="about">
+      <h2>About Us: Your Local Healthcare Partner</h2>
+      <p style="color:var(--muted)">Ilaaz Home Healthcare, Dhanbad के निवासियों को गुणवत्तापूर्ण और किफायती देखभाल प्रदान करने के मिशन के साथ स्थापित किया गया था। हम समझते हैं कि घर पर आराम से इलाज कराना कितना महत्वपूर्ण है। हमारी टीम में **Dhanbad के अनुभवी डॉक्टर, प्रमाणित नर्सें और फिजियोथेरेपिस्ट** शामिल हैं जो यह सुनिश्चित करते हैं कि आपको सबसे विश्वसनीय और दयालु (compassionate) देखभाल मिले।</p>
+    </section>
 
-<footer>
-  <p>&copy; 2025 Ilaaz Healthcare. All rights reserved.</p>
-</footer>
+    <section id="contact" style="margin-top:18px">
+      <h2>Contact & Emergency Booking</h2>
+      <p style="color:var(--muted);margin-bottom:12px">📞 Call / WhatsApp: <strong><a href="tel:+917004903739">+91 7004903739</a></strong></p>
+      <p>✉️ Email: <a href="mailto:thevikash08@gmail.com">thevikash08@gmail.com</a></p>
+      <p style="margin-top:12px;color:var(--muted)">For quick service, tap 'Book Now' or send a WhatsApp message.</p>
+    </section>
 
+    <footer>
+      <div class="container">© <span id="year"></span> Ilaaz Healthcare · Connecting Care to Home.</div>
+      <div class="container" style="margin-top: 4px; font-size: 12px;">Serving Dhanbad and surrounding areas.</div>
+    </footer>
+  </main>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-

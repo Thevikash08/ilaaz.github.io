@@ -19,7 +19,7 @@
     /* Header (Fixed/Sticky for App Feel) */
     header{
       background: #fff;
-      padding: 16px 0; /* Adjusted padding */
+      padding: 16px 0;
       box-shadow: 0 1px 4px rgba(0,0,0,.05);
       position: sticky; 
       top: 0; 
@@ -29,8 +29,7 @@
     .header-content{display:flex; align-items:center; justify-content: space-between;}
     .brand{display:flex; align-items:center; gap: 10px;}
     .brand img{width: 40px; height: 40px; object-fit: contain; border-radius: 8px; background: var(--primary-teal); padding: 4px;}
-    nav a{margin-left: 14px; text-decoration:none; color: var(--muted); font-weight: 600; font-size: 14px;}
-
+    
     /* Hero Section (Focus on Search/Booking) */
     .hero{padding: 24px 0 16px;}
     h1{font-size: 24px; margin: 0 0 4px; font-weight: 800;}
@@ -45,7 +44,7 @@
       border-radius: 10px;
       background: #fff;
       margin-bottom: 24px;
-      cursor: pointer; /* To make it look clickable */
+      cursor: pointer;
     }
     .search-bar-mimic i {color: var(--muted); margin-right: 10px; font-size: 18px;}
     .search-bar-mimic span {color: var(--muted); font-size: 15px;}
@@ -55,7 +54,7 @@
 
     /* Service Cards (Grid for App Look) */
     #services h2 {font-size: 20px; margin-top: 0;}
-    .card-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); gap: 12px; margin: 16px 0 30px;} /* Tighter grid for 8 items */
+    .card-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); gap: 12px; margin: 16px 0 30px;}
     .card{
       padding: 18px 10px;
       border-radius: 12px;
@@ -80,9 +79,7 @@
     @media(max-width:600px){
       h1{font-size: 22px;}
       .header-content {justify-content: space-between;}
-      nav {display: none;}
-      .hero{padding: 16px 0 16px;}
-      .card-list{grid-template-columns: repeat(4, 1fr);} /* 4 columns for small, dense app-like grid */
+      .card-list{grid-template-columns: repeat(4, 1fr);}
     }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -92,7 +89,7 @@
     <div class="container">
       <div class="header-content">
         <div class="brand">
-          <img src="logo.png" alt="Ilaaz Logo"> 
+          <img src="./logo.png" alt="Ilaaz Logo"> 
           <div>
             <strong>Ilaaz</strong><br>
             <small style="color:var(--muted); font-size: 12px;">Dhanbad, Jharkhand</small>
@@ -114,7 +111,7 @@
         </a>
 
         <div style="margin-bottom: 24px; text-align: center;">
-            <img alt="Healthcare service" style="width:100%; max-width: 400px; border-radius:12px; box-shadow:0 6px 18px rgba(13,38,76,.08)" src="hero-image.jpg">
+            <img alt="Healthcare service" style="width:100%; max-width: 400px; border-radius:12px; box-shadow:0 6px 18px rgba(13,38,76,.08)" src="./hero-image.jpg">
         </div>
 
         <a class="btn" href="https://wa.me/917004903739?text=Hi%2C%20I%20want%20to%20book%20a%20home%20healthcare%20service%20from%20Ilaaz.">EMERGENCY BOOKING: Call or WhatsApp Now</a>
@@ -165,14 +162,6 @@
         </div>
         
         <div class="card">
-          <a href="https://wa.me/917004903739?text=Hi%2C%20I%20want%20to%20book%20Elder%20Care%20from%20Ilaaz.">
-            <i class="fa-solid fa-house-medical card-icon"></i>
-            <strong>Elder Care</strong>
-            <p>Daily Check-ins.</p>
-          </a>
-        </div>
-        
-        <div class="card">
           <a href="https://wa.me/917004903739?text=Hi%2C%20I%20want%20to%20book%20Vaccination%20at%20Home%20from%20Ilaaz.">
             <i class="fa-solid fa-shield-virus card-icon"></i>
             <strong>Vaccination</strong>
@@ -187,14 +176,15 @@
             <p>Ambulance Call.</p>
           </a>
         </div>
-        </div>
+        
+      </div>
     </section>
 
     <section id="about">
       <h2>About Ilaaz: Your Trusted Local Partner</h2>
-      <p style="color:var(--muted)">Ilaaz Home Healthcare, Dhanbad के निवासियों को गुणवत्तापूर्ण और किफायती देखभाल प्रदान करने के मिशन के साथ स्थापित किया गया था। हम समझते हैं कि घर पर आराम से इलाज कराना कितना महत्वपूर्ण है। हमारी टीम में **Dhanbad के अनुभवी डॉक्टर, प्रमाणित नर्सें और फिजियोथेरेपिस्ट** शामिल हैं जो यह सुनिश्चित करते हैं कि आपको सबसे विश्वसनीय और दयालु (compassionate) देखभाल मिले।</p>
+      <p style="color:var(--muted)">Ilaaz Home Healthcare, **Dhanbad** के निवासियों को गुणवत्तापूर्ण और किफायती देखभाल प्रदान करने के मिशन के साथ स्थापित किया गया था। हमारी टीम में **Dhanbad के अनुभवी डॉक्टर, प्रमाणित नर्सें और फिजियोथेरेपिस्ट** शामिल हैं जो यह सुनिश्चित करते हैं कि आपको सबसे विश्वसनीय और दयालु (compassionate) देखभाल मिले।</p>
     </section>
-
+    
     <section id="contact">
       <h2>Contact</h2>
       <p style="color:var(--muted);margin-bottom:12px">📞 Call / WhatsApp: <strong><a href="tel:+917004903739" style="color: var(--primary-teal);">+91 7004903739</a></strong></p>

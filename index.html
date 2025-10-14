@@ -1,258 +1,66 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ilaaz Healthcare at Home | Quick Home Booking</title>
-  <meta name="description" content="Book a certified Nurse, Physiotherapist, or Lab Test at home in Dhanbad. Emergency home healthcare services via WhatsApp/Call.">
-  <link rel="icon" href="./logo.png">
-  
-  <style>
-    /* Global Variables and Aesthetics */
-    :root{
-      --primary-teal: #00b0b8; /* Main Accent Color */
-      --secondary-blue: #0b6efd; 
-      --background-light: #f5f8fa; /* Light background for sections */
-      --muted: #666;
-      --text-dark: #111;
-      --shadow: 0 4px 12px rgba(0,0,0,.08);
-      --card-shadow: 0 1px 4px rgba(0,0,0,.06);
-    }
-    body{
-      font-family: 'Inter', system-ui, Arial, sans-serif; 
-      margin: 0; 
-      color: var(--text-dark); 
-      line-height: 1.45; 
-      background-color: #fff;
-      padding-bottom: 70px; /* Space for sticky footer */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>विकैश क्लिनिक - ईलाज</title>
     
-    /* Header (Fixed/Sticky for App Feel) */
-    header{
-      background: #fff;
-      padding: 16px 0;
-      box-shadow: 0 1px 4px rgba(0,0,0,.08);
-      position: sticky; 
-      top: 0; 
-      z-index: 100;
-    }
-    .container{max-width: 980px; margin: 0 auto; padding: 0 16px;}
-    .header-content{display:flex; align-items:center; justify-content: space-between;}
-    .brand{display:flex; align-items:center; gap: 10px;}
-    .brand img{width: 40px; height: 40px; object-fit: contain; border-radius: 8px; background: var(--primary-teal); padding: 4px;}
-    .brand h3 {margin: 0; font-size: 18px; font-weight: 800; color: var(--text-dark);}
-    .brand small {color: var(--muted); font-size: 12px; margin-top: 2px; display: block;}
-    
-    /* Hero Section (Focus on Search/Booking) */
-    .hero{padding: 24px 0 16px;}
-    h1{font-size: 24px; margin: 0 0 4px; font-weight: 800;}
-    p.lead{color: var(--muted); margin: 0 0 18px; font-size: 15px;}
-
-    /* Search Bar Mimic (App-like Input Field) */
-    .search-bar-mimic {
-      display: flex;
-      align-items: center;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      background: #fff;
-      margin-bottom: 24px;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 2px 6px rgba(0,0,0,.04); /* Subtle Shadow */
-    }
-    .search-bar-mimic i {color: var(--muted); margin-right: 10px; font-size: 18px;}
-    .search-bar-mimic span {color: var(--muted); font-size: 15px;}
-
-    /* CTA Button (Prominent) */
-    .btn{display: block; width: 100%; text-align: center; padding: 14px 20px; border-radius: 10px; text-decoration:none; background: var(--primary-teal); color:#fff; font-weight:700; font-size: 17px; box-shadow: var(--shadow); transition: background 0.2s;}
-    .btn:hover {background: #008a90;}
-
-    /* Service Cards (Grid for App Look) */
-    #services {padding: 0 0 30px;}
-    #services h2 {font-size: 20px; margin-top: 0; margin-bottom: 16px;}
-    .card-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); gap: 12px;}
-    .card{
-      padding: 18px 10px;
-      border-radius: 12px;
-      background:#fff;
-      text-align: center;
-      box-shadow: var(--card-shadow);
-      border: 1px solid #f0f0f0;
-      transition: all 0.2s;
-    }
-    .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.1);}
-    .card-icon {color: var(--primary-teal); font-size: 28px; margin-bottom: 4px; display: block;} 
-    .card strong {display: block; margin-top: 4px; font-size: 15px;}
-    .card p {font-size: 12px; margin: 4px 0 0 !important; color: var(--muted);}
-    .card a {text-decoration: none; color: inherit;}
-
-    /* Trust Bar */
-    .trust-bar {
-        text-align:center; 
-        padding: 12px 15px; 
-        margin-bottom: 30px; 
-        background: var(--background-light); 
-        border-radius: 10px; 
-        box-shadow: 0 1px 4px rgba(0,0,0,.04);
-    }
-    
-    /* Other Sections */
-    #about, #contact {padding: 20px 0;}
-    #about p {font-size: 15px;}
-    footer{border-top: 1px solid #eee; padding: 20px 0; color: var(--muted); font-size: 13px; margin-top: 40px; text-align: center;}
-    
-    /* --- NEW: STICKY FOOTER FOR MOBILE CTA --- */
-    .sticky-footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        padding: 10px 0;
-        box-shadow: 0 -2px 10px rgba(0,0,0,.1);
-        z-index: 1000;
-        display: none; /* Hide by default on desktop */
-    }
-    
-    /* Mobile Optimization */
-    @media(max-width:600px){
-      h1{font-size: 22px;}
-      .card-list{grid-template-columns: repeat(3, 1fr);} /* 3 columns on small screen */
-      .sticky-footer {
-          display: block; /* Show on mobile */
-      }
-      .hero .btn { /* Hide the large CTA button on mobile as it's in the footer */
-          display: none;
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="brand">
-          <img src="./logo.png" alt="Ilaaz Logo"> 
-          <div>
-            <h3>Ilaaz</h3>
-            <small>Dhanbad, Jharkhand</small>
-          </div>
-        </div>
-        <i class="fa-solid fa-bell" style="color: var(--primary-teal); font-size: 20px;"></i>
-      </div>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-        <h1>Quick Home Care Booking.</h1>
-        <p class="lead">Book a certified Nurse or Physiotherapist for a home visit in Dhanbad.</p>
-        
-        <a class="search-bar-mimic" href="https://wa.me/919523745351?text=Hi%2C%20I%20am%20looking%20for%20a%20specific%20home%20service." title="Tap to search and book service">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span>Search Doctor, Service, or Test... (Tap to Book via WhatsApp)</span>
-        </a>
+    <header>
+        <div class="container">
+            <h1 class="logo">विकैश क्लिनिक</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">होम</a></li>
+                    <li><a href="#services">सेवाएँ</a></li>
+                    <li><a href="ilaaj.pdf" target="_blank">PDF रिसोर्स</a></li>
+                    <li><a href="#contact">संपर्क</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <div style="margin-bottom: 24px; text-align: center;">
-            <img alt="Healthcare service" style="width:100%; max-width: 400px; border-radius:12px; box-shadow:0 6px 18px rgba(13,38,76,.08)" src="./hero-image.jpg">
-        </div>
+    <main class="container">
+        <h2>हमारी स्वास्थ्य सेवाएँ</h2>
+        
+        <section id="services" class="services-grid">
+            
+            <div class="service-card">
+                <h3>सामान्य ओपीडी</h3>
+                <p>दैनिक परामर्श और प्राथमिक चिकित्सा।</p>
+                <p>समय: सुबह 9 बजे से शाम 5 बजे तक।</p>
+            </div>
 
-        <a class="btn" href="https://wa.me/919523745351?text=Hi%2C%20I%20want%20to%20book%20a%20home%20healthcare%20service%20from%20Ilaaz.">EMERGENCY BOOKING: Call or WhatsApp Now</a>
-    </section>
-    
-    <section class="trust-bar">
-        <i class="fa-solid fa-star" style="color: gold; margin-right: 6px;"></i>
-        <strong style="font-size: 15px;">Trusted by 100+ Dhanbad Families</strong>
-        <span style="color: var(--muted); font-size: 13px; margin-left: 10px;">(4.9/5 Rating)</span>
-    </section>
+            <div class="service-card">
+                <h3>टीकाकरण सेवा</h3>
+                <p>सभी आयु समूहों के लिए आवश्यक टीके उपलब्ध।</p>
+                <p>पहले से अपॉइंटमेंट लें।</p>
+            </div>
 
-    <section id="services">
-      <h2>Top Home Services</h2>
-      <div class="card-list">
-        
-        <div class="card">
-          <a href="https://wa.me/919523745351?text=Hi%2C%20I%20want%20to%20book%20Teleconsultation%20from%20Ilaaz.">
-            <i class="fa-solid fa-user-doctor card-icon"></i>
-            <strong>Consultation</strong>
-            <p>Online Advice.</p>
-          </a>
-        </div>
-        
-        <div class="card">
-          <a href="https://wa.me/919523745351?text=Hi%2C%20I%20want%20to%20order%20Medicines%20from%20Ilaaz.">
-            <i class="fa-solid fa-pills card-icon"></i>
-            <strong>Medicines</strong>
-            <p>Home Delivery.</p>
-          </a>
-        </div>
-        
-        <div class="card">
-          <a href="https://wa.me/919523745351?text=Hi%2C%20I%20want%20to%20book%20a%20Lab%20Test%20at%20Home%20from%20Ilaaz.">
-            <i class="fa-solid fa-flask card-icon"></i>
-            <strong>Lab Tests</strong>
-            <p>Sample Collection.</p>
-          </a>
-        </div>
-        
-        <div class="card">
-          <a href="https://wa.me/919523745351?text=Hi%2C%20I%20want%20to%20book%20Home%20Nursing%20from%20Ilaaz.">
-            <i class="fa-solid fa-syringe card-icon"></i>
-            <strong>Nursing</strong>
-            <p>Dressing, Saline, etc.</p>
-          </a>
-        </div>
-        
-        <div class="card">
-          <a href="https://wa.me/919523745351?text=Hi%2C%20I%20want%20to%20book%20Physiotherapy%20from%20Ilaaz.">
-            <i class="fa-solid fa-person-walking card-icon"></i>
-            <strong>Physiotherapy</strong>
-            <p>Rehab & Pain Mgmt.</p>
-          </a>
-        </div>
-        
-        <div class="card">
-          <a href="https://wa.me/919523745351?text=Hi%2C%20I%20want%20to%20book%20Vaccination%20at%20Home%20from%20Ilaaz.">
-            <i class="fa-solid fa-shield-virus card-icon"></i>
-            <strong>Vaccination</strong>
-            <p>Home & Corporate.</p>
-          </a>
-        </div>
+            <div class="service-card">
+                <h3>स्वास्थ्य शिक्षा</h3>
+                <p>बीमारियों से बचाव और स्वस्थ जीवनशैली पर जानकारी।</p>
+                <a href="ilaaj.pdf" target="_blank">PDF गाइड डाउनलोड करें</a>
+            </div>
 
-        <div class="card">
-          <a href="tel:+919523745351" title="Call for Emergency Ambulance Service">
-            <i class="fa-solid fa-truck-medical card-icon" style="color: #ff0000;"></i>
-            <strong>Emergency</strong>
-            <p>Ambulance Call.</p>
-          </a>
-        </div>
+        </section>
         
-      </div>
-    </section>
+        <section style="margin-top: 40px; text-align: center;">
+            <h2>हमारे फाउंडेशन के बारे में</h2>
+            <p>विकैश क्लिनिक अब एक फाउंडेशन के माध्यम से वंचितों को मुफ्त स्वास्थ्य सेवाएँ प्रदान करने की दिशा में काम कर रहा है।</p>
+        </section>
+    </main>
 
-    <section id="about">
-      <h2>About Ilaaz: Your Trusted Local Partner</h2>
-      <p style="color:var(--muted)">Ilaaz Home Healthcare, **Dhanbad** के निवासियों को गुणवत्तापूर्ण और किफायती देखभाल प्रदान करने के मिशन के साथ स्थापित किया गया था। हमारी टीम में **Dhanbad के अनुभवी डॉक्टर, प्रमाणित नर्सें और फिजियोथेरेपिस्ट** शामिल हैं जो यह सुनिश्चित करते हैं कि आपको सबसे विश्वसनीय और दयालु (compassionate) देखभाल मिले।</p>
-    </section>
-    
-    <section id="contact">
-      <h2>Contact</h2>
-      <p style="color:var(--muted);margin-bottom:12px">📞 Call / WhatsApp: <strong><a href="tel:+919523745351" style="color: var(--primary-teal);">+91 95237 45351</a></strong></p>
-      <p>✉️ Email: <a href="mailto:ilaazathome@gmail.com" style="color: var(--primary-teal);">ilaazathome@gmail.com</a></p>
-    </section>
-
-    <footer>
-      <div>© <span id="year"></span> Ilaaz Healthcare · All rights reserved.</div>
+    <footer id="contact">
+        <div class="container">
+            <p>संपर्क करें: +91-XXXXXXXXXX | ईमेल: vikashclinic@example.com</p>
+            <p>&copy; 2025 विकैश क्लिनिक फाउंडेशन। सभी अधिकार सुरक्षित।</p>
+        </div>
     </footer>
-  </main>
-  
-  <div class="sticky-footer">
-    <div class="container">
-      <a class="btn" href="https://wa.me/919523745351?text=Hi%2C%20I%20want%20to%20book%20a%20home%20healthcare%20service%20from%20Ilaaz.">BOOK NOW via WhatsApp</a>
-    </div>
-  </div>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>

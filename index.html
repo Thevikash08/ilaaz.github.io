@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>विकैश क्लिनिक - ईलाज</title>
+    <title>Ilaaz Clinic - Health & Wellness</title>
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,54 +11,80 @@
 
     <header>
         <div class="container">
-            <h1 class="logo">विकैश क्लिनिक</h1>
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Ilaaz Logo" class="logo-img">
+            </a>
             
             <nav>
                 <ul>
-                    <li><a href="index.html">होम</a></li>
-                    <li><a href="#services">सेवाएँ</a></li>
-                    <li><a href="ilaaj.pdf" target="_blank">PDF रिसोर्स</a></li>
-                    <li><a href="#contact">संपर्क</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="ilaaj.pdf" target="_blank">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <h2>हमारी स्वास्थ्य सेवाएँ</h2>
+        <section class="hero-section">
+            <h1>Your Health, Our Priority.</h1>
+            <p>Providing accessible and comprehensive healthcare services in your community.</p>
+            <a href="#contact" class="btn">Book Appointment</a>
+        </section>
         
-        <section id="services" class="services-grid">
+        <section id="services" style="margin-top: 40px;">
+            <h2>Our Core Services</h2>
             
-            <div class="service-card">
-                <h3>सामान्य ओपीडी</h3>
-                <p>दैनिक परामर्श और प्राथमिक चिकित्सा।</p>
-                <p>समय: सुबह 9 बजे से शाम 5 बजे तक।</p>
-            </div>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <h3>General OPD</h3>
+                    <p>Daily consultation, primary care, and diagnosis for common ailments.</p>
+                </div>
 
-            <div class="service-card">
-                <h3>टीकाकरण सेवा</h3>
-                <p>सभी आयु समूहों के लिए आवश्यक टीके उपलब्ध।</p>
-                <p>पहले से अपॉइंटमेंट लें।</p>
-            </div>
+                <div class="service-card">
+                    <h3>Vaccination</h3>
+                    <p>All essential vaccines available for children and adults. Schedule an appointment today.</p>
+                </div>
 
-            <div class="service-card">
-                <h3>स्वास्थ्य शिक्षा</h3>
-                <p>बीमारियों से बचाव और स्वस्थ जीवनशैली पर जानकारी।</p>
-                <a href="ilaaj.pdf" target="_blank">PDF गाइड डाउनलोड करें</a>
-            </div>
+                <div class="service-card">
+                    <h3>Lab Testing</h3>
+                    <p>Basic blood and urine tests with quick and reliable results.</p>
+                </div>
 
+            </div>
         </section>
         
-        <section style="margin-top: 40px; text-align: center;">
-            <h2>हमारे फाउंडेशन के बारे में</h2>
-            <p>विकैश क्लिनिक अब एक फाउंडेशन के माध्यम से वंचितों को मुफ्त स्वास्थ्य सेवाएँ प्रदान करने की दिशा में काम कर रहा है।</p>
+        <section id="contact" style="padding: 40px 0; background: #fff; border-radius: 8px; margin-top: 30px;">
+            <h2>Book an Appointment</h2>
+            
+            <form action="YOUR_FORMSPREE_URL_HERE" method="POST" class="contact-form">
+                
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Optional for call-back">
+
+                <label for="message">Reason for Visit:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit">Send Inquiry</button>
+            </form>
         </section>
+
     </main>
 
-    <footer id="contact">
+    <footer>
         <div class="container">
-            <p>संपर्क करें: +91-XXXXXXXXXX | ईमेल: vikashclinic@example.com</p>
-            <p>&copy; 2025 विकैश क्लिनिक फाउंडेशन। सभी अधिकार सुरक्षित।</p>
+            <p>Call Us: [Your Phone Number] | Email: [Your Email]</p>
+            <p>&copy; 2025 Ilaaz Foundation. All Rights Reserved.</p>
         </div>
     </footer>
 

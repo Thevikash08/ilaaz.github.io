@@ -1,160 +1,40 @@
-/* 1. Global Reset and Responsive Setup */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4; /* Light background */
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fafc;
+  color: #333;
+  text-align: center;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
-}
-
-/* 2. Header and Navigation */
 header {
-    background: #008080; /* Ilaaz Teal Primary Color */
-    color: #fff;
-    padding: 10px 0;
+  background-color: #0077b6;
+  color: white;
+  padding: 20px 0;
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo {
+  width: 80px;
+  border-radius: 50%;
 }
 
-.logo-img {
-    height: 45px; /* Logo size */
-    width: auto;
-    display: block;
+h1 {
+  margin: 10px 0;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
+section {
+  margin: 30px auto;
+  width: 80%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #006666; /* Darker hover effect */
-}
-
-/* 3. Hero Section */
-.hero-section {
-    padding: 60px 0;
-    text-align: center;
-    background: #fff;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.btn {
-    display: inline-block;
-    background: #008080;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-/* 4. Services Grid (Responsive Layout) */
-.services-grid {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.service-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 300px; /* Flexbox magic: Allows cards to grow/shrink, 300px min width */
-    margin-bottom: 10px;
-}
-
-/* 5. Contact Form Styling */
-.contact-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-.contact-form button[type="submit"] {
-    display: block;
-    width: 100%;
-    background-color: #008080; 
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.1em;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.contact-form button[type="submit"]:hover {
-    background-color: #006666; 
-}
-
-/* 6. Footer */
 footer {
-    background: #34495e; /* Dark professional footer */
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-    font-size: 0.9em;
-}
-
-/* 7. Mobile Responsiveness (Media Query) */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column; 
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column; 
-        margin-top: 10px;
-    }
-    nav ul li {
-        width: 100%;
-        margin: 5px 0;
-    }
-    nav ul li a {
-        padding: 8px 0;
-    }
+  background: #023e8a;
+  color: white;
+  padding: 10px 0;
+  margin-top: 30px;
 }

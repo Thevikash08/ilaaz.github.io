@@ -1,33 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ILaaz - Your Home Healthcare Partner</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ILaaz - Dhanbad's Trusted Home Healthcare</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" type="image/png" />
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="ILaaz Logo" class="logo">
-    <h1>Welcome to ILaaz</h1>
-    <p>Your trusted home healthcare service in Dhanbad</p>
+
+  <!-- Header -->
+  <header class="navbar">
+    <img src="logo.png" class="logo" alt="ILaaz Logo" />
+    <h1>ILaaz - Ghar Tak Healthcare</h1>
+    <a href="tel:9523745351" class="call-btn">📞 Call Now</a>
   </header>
 
-  <main>
-    <section class="about">
-      <h2>About Us</h2>
-      <p>We provide home healthcare, physiotherapy, elder care, dressing, and teleconsultation services at your doorstep.</p>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Your Health, Our Priority</h2>
+    <p>Trusted Home Healthcare Services in Dhanbad — from Saline to Physiotherapy, we bring care to your doorstep.</p>
+    <a href="#services" class="btn-primary">Explore Services</a>
+  </section>
 
-    <section class="contact">
-      <h2>Contact Us</h2>
-      <p><strong>Phone:</strong> 9523745351</p>
-      <p><strong>Email:</strong> support@ilaaz.co.in</p>
-    </section>
-  </main>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Home Services</h2>
+    <div class="service-list">
+      <div class="service-card">
+        <h3>💉 Saline at Home</h3>
+        <p>Professional nurse-administered IV saline at home with complete hygiene.</p>
+      </div>
+      <div class="service-card">
+        <h3>🏃 Physiotherapy</h3>
+        <p>Expert physiotherapists for post-surgery recovery, pain relief, and mobility improvement.</p>
+      </div>
+      <div class="service-card">
+        <h3>🩹 Dressing & Wound Care</h3>
+        <p>Proper dressing for wounds, stitches, and post-surgery maintenance at home.</p>
+      </div>
+      <div class="service-card">
+        <h3>🧓 Elder Care</h3>
+        <p>Daily care, BP/Sugar check, and health monitoring for elders with compassion.</p>
+      </div>
+      <div class="service-card">
+        <h3>🧪 Home Lab Tests</h3>
+        <p>Sample collection at home for lab testing — safe, reliable, and fast results.</p>
+      </div>
+      <div class="service-card">
+        <h3>💊 Medicine Delivery</h3>
+        <p>Get your medicines delivered right to your home within Dhanbad.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Booking Form -->
+  <section class="booking">
+    <h2>Book a Home Visit</h2>
+    <form action="https://formspree.io/f/xqazgkpy" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="tel" name="phone" placeholder="Mobile Number" required />
+      <select name="service" required>
+        <option value="">Select a Service</option>
+        <option>Saline at Home</option>
+        <option>Physiotherapy</option>
+        <option>Dressing</option>
+        <option>Elder Care</option>
+        <option>Home Lab Test</option>
+        <option>Medicine Delivery</option>
+      </select>
+      <textarea name="address" placeholder="Your Address in Dhanbad" required></textarea>
+      <button type="submit" class="btn-primary">Submit Request</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 9523745351 | ✉️ support@ilaaz.co.in</p>
+    <p>Available 7 days a week across Dhanbad.</p>
+    <a href="https://wa.me/919523745351" class="btn-secondary">Chat on WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 ILaaz. All rights reserved.</p>
+    <p>© 2025 ILaaz Healthcare, Dhanbad. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>

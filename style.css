@@ -22,10 +22,15 @@ body {
 }
 
 .logo {
-  height: 60px;
+  height: 80px;              /* Bigger and clearer */
   width: auto;
-  border-radius: 8px;
+  border-radius: 10px;
+  object-fit: contain;       /* Keeps quality intact */
+  filter: brightness(1.2);   /* Makes it more visible */
+  image-rendering: -webkit-optimize-contrast; /* Sharper edges */
+  margin: 5px 15px;
 }
+
 
 
 .call-btn {

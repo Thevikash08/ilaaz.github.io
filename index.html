@@ -57,21 +57,36 @@
   <!-- Booking Form -->
   <section class="booking">
     <h2>Book a Home Visit</h2>
-    <form action="https://formspree.io/f/xqazgkpy" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="tel" name="phone" placeholder="Mobile Number" required />
-      <select name="service" required>
-        <option value="">Select a Service</option>
-        <option>Saline at Home</option>
-        <option>Physiotherapy</option>
-        <option>Dressing</option>
-        <option>Elder Care</option>
-        <option>Home Lab Test</option>
-        <option>Medicine Delivery</option>
-      </select>
-      <textarea name="address" placeholder="Your Address in Dhanbad" required></textarea>
-      <button type="submit" class="btn-primary">Submit Request</button>
-    </form>
+   <form action="https://formspree.io/f/xdkwqnzp" method="POST" class="contact-form">
+  <h2>Book a Home Visit</h2>
+
+  <label for="name">Full Name</label>
+  <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+  <label for="phone">Phone Number</label>
+  <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+  <label for="service">Select Service</label>
+  <select id="service" name="service" required>
+    <option value="">-- Choose a Service --</option>
+    <option value="Physiotherapy">Physiotherapy</option>
+    <option value="Saline at Home">Saline at Home</option>
+    <option value="Post Surgery Care">Post Surgery Care</option>
+    <option value="Elder Care">Elder Care</option>
+    <option value="Medicine Delivery">Medicine Delivery</option>
+    <option value="Home Lab Test">Home Lab Test</option>
+    <option value="Others">Others</option>
+  </select>
+
+  <label for="message">Additional Details</label>
+  <textarea id="message" name="message" placeholder="Describe your issue or preferred time" required></textarea>
+
+  <button type="submit">Submit Request</button>
+</form>
+
   </section>
 
   <!-- Contact Section -->
@@ -89,5 +104,6 @@
 
 </body>
 </html>
+
 
 

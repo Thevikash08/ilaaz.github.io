@@ -90,39 +90,50 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: 0.3s;
 }
-.highlight-section {
+#services {
   background-color: #f9f9f9;
-  text-align: center;
   padding: 60px 20px;
-  border-top: 2px solid #009688;
-  border-bottom: 2px solid #009688;
+  text-align: center;
 }
 
-.highlight-section h2 {
-  color: #009688;
+#services h2 {
   font-size: 2em;
+  color: #009688;
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px;
+  width: 250px;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.service h3 {
+  color: #009688;
   margin-bottom: 10px;
 }
 
-.highlight-section p {
-  color: #333;
-  font-size: 1.1em;
-  margin-bottom: 20px;
+.service p {
+  color: #555;
+  font-size: 1em;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #009688;
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background-color: #00796b;
-}
 
 
 .service-card:hover {

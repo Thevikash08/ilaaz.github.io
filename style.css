@@ -118,6 +118,16 @@ body {
   transition: 0.3s;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+.service-icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  color: #0056b3;
+}
 
 .service:hover {
   transform: translateY(-5px);

@@ -217,3 +217,41 @@ footer {
     font-size: 1.8rem;
   }
 }
+/* Floating WhatsApp Chat Button */
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-chat img {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-chat span {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.whatsapp-chat:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Teleconsultation Icon Fix */
+.service-tile i {
+  color: #007bff;
+  margin-bottom: 10px;
+}

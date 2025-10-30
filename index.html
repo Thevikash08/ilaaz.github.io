@@ -3,33 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ILaaz - Your Health, Our Priority</title>
+  <title>ILaaz - Allopathy | Homeopathy | Home Care</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <div class="header-container">
-      <h1>ILaaz</h1>
-      <p>Your Health, Our Priority</p>
-    </div>
+  <header class="navbar">
+    <div class="logo">ILaaz</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#appointment">Appointment</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Comprehensive Healthcare at Your Doorstep</h2>
-      <p>We bring expert care, both Allopathy and Homeopathy, directly to you — including physiotherapy, medicine delivery, and saline services.</p>
-      <a href="#services" class="btn">Explore Services</a>
-    </div>
+  <section id="home" class="hero">
+    <h1>Your Health, Our Priority</h1>
+    <p>Comprehensive healthcare at your doorstep — Allopathy | Homeopathy | Physiotherapy | Elder Care</p>
+    <a href="#appointment" class="btn-primary">Book Appointment</a>
   </section>
 
   <section id="services" class="services">
     <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>Allopathy Consultation</h3>
-        <p>Connect with qualified doctors for your health concerns, available online and offline.</p>
+    <div class="service-container">
+      <div class="card">
+        <h3>Allopathy Care</h3>
+        <p>Teleconsultation, prescription, medicine delivery, saline & dressing at home.</p>
       </div>
-
-      <div class="service-card">
+      <div class="card">
         <h3>Homeopathy Care</h3>
-        <p>Natural healing through homeopathic treatments — gentle, s
+        <p>Consult with certified homeopathy experts for holistic treatment.</p>
+      </div>
+      <div class="card">
+        <h3>Physiotherapy</h3>
+        <p>Expert physiotherapists available for home visits and recovery support.</p>
+      </div>
+      <div class="card">
+        <h3>Elder Care</h3>
+        <p>Specialized care for senior citizens including checkups & wellness monitoring.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="appointment" class="appointment">
+    <h2>Book Your Appointment</h2>
+    <form class="form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <select required>
+        <option value="">Select Department</option>
+        <option value="allopathy">Allopathy</option>
+        <option value="homeopathy">Homeopathy</option>
+        <option value="physiotherapy">Physiotherapy</option>
+        <option value="eldercare">Elder Care</option>
+      </select>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Call: <a href="tel:+919999999999">+91 99999 99999</a></p>
+    <p>📍 Dhanbad, Jharkhand</p>
+    <p>💬 Chat with us on WhatsApp</p>
+  </section>
+
+  <a href="https://wa.me/919999999999" class="whatsapp-icon" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <footer>
+    <p>© 2025 ILaaz Healthcare. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

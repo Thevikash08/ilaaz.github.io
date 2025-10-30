@@ -1,121 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ILaaz - Dhanbad's Trusted Home Healthcare</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo.png" type="image/png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ILaaz - Allopathy & Homeopathy Care</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 </head>
 <body>
 
   <!-- Header -->
-  <header class="navbar">
-   <img src="logo.png" alt="Ilaaz Logo" class="logo" loading="lazy">
-    <h1>ILaaz - Ghar Tak Healthcare</h1>
-    <a href="tel:9523745351" class="call-btn">📞 Call Now</a>
+  <header>
+    <h1>ILaaz</h1>
+    <p>Your Trusted Partner for Allopathy & Homeopathy Care in Dhanbad</p>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Your Health, Our Priority</h2>
-    <p>Trusted Home Healthcare Services in Dhanbad — from Saline to Physiotherapy, we bring care to your doorstep.</p>
-    <a href="#services" class="btn-primary">Explore Services</a>
-  </section>
+  <!-- Service Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-container">
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2>Our Home Services</h2>
-    <div class="service-list">
+      <!-- Allopathy Section -->
       <div class="service-card">
-        <h3>💉 Saline at Home</h3>
-        <p>Professional nurse-administered IV saline at home with complete hygiene.</p>
+        <i class="fa-solid fa-stethoscope"></i>
+        <h3>Allopathy Consultation</h3>
+        <p>Connect instantly with MBBS doctors for general & specialist consultations.</p>
+        <button>Book Now</button>
       </div>
-      <div class="service-card">
-        <h3>🏃 Physiotherapy</h3>
-        <p>Expert physiotherapists for post-surgery recovery, pain relief, and mobility improvement.</p>
-      </div>
-      <div class="service-card">
-        <h3>🩹 Dressing & Wound Care</h3>
-        <p>Proper dressing for wounds, stitches, and post-surgery maintenance at home.</p>
-      </div>
-      <div class="service-card">
-        <h3>🧓 Elder Care</h3>
-        <p>Daily care, BP/Sugar check, and health monitoring for elders with compassion.</p>
-      </div>
-      <div class="service-card">
-        <h3>🧪 Home Lab Tests</h3>
-        <p>Sample collection at home for lab testing — safe, reliable, and fast results.</p>
-      </div>
-  <div class="service-card">
-  <i class="fa fa-headset service-icon"></i>
-  <h3>Teleconsultation</h3>
-  <p>Consult our doctors online from the comfort of your home. Quick, secure, and easy.</p>
-</div>
 
-  <div class="service-card">
-        <h3>💊 Medicine Delivery</h3>
-        <p>Get your medicines delivered right to your home within Dhanbad.</p>
+      <!-- Homeopathy Section -->
+      <div class="service-card">
+        <i class="fa-solid fa-leaf"></i>
+        <h3>Homeopathy Consultation</h3>
+        <p>Get personalized homeopathic care for chronic & lifestyle diseases.</p>
+        <button>Book Now</button>
       </div>
+
+      <!-- Physiotherapy -->
+      <div class="service-card">
+        <i class="fa-solid fa-person-running"></i>
+        <h3>Physiotherapy at Home</h3>
+        <p>Professional physiotherapists available for home visits and therapy sessions.</p>
+        <button>Book Now</button>
+      </div>
+
+      <!-- Saline & Dressing -->
+      <div class="service-card">
+        <i class="fa-solid fa-syringe"></i>
+        <h3>Saline & Dressing</h3>
+        <p>Get nursing support for saline, injection, and wound dressing at home.</p>
+        <button>Book Now</button>
+      </div>
+
+      <!-- Medicine Delivery -->
+      <div class="service-card">
+        <i class="fa-solid fa-truck-medical"></i>
+        <h3>Medicine Delivery</h3>
+        <p>Fast and reliable delivery of both Allopathic & Homeopathic medicines.</p>
+        <button>Order Now</button>
+      </div>
+
+      <!-- Teleconsultation -->
+      <div class="service-card">
+        <i class="fa-solid fa-video"></i>
+        <h3>Teleconsultation</h3>
+        <p>Video consultation from the comfort of your home — anytime, anywhere.</p>
+        <button>Start Call</button>
+      </div>
+
     </div>
-  </section>
-
-  <!-- Booking Form -->
-  <section class="booking">
-    <h2>Book a Home Visit</h2>
-   <form action="https://formspree.io/f/xdkwqnzp" method="POST" class="contact-form">
-  <h2>Book a Home Visit</h2>
-
-  <label for="name">Full Name</label>
-  <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-  <label for="phone">Phone Number</label>
-  <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
-
-  <label for="service">Select Service</label>
-  <select id="service" name="service" required>
-    <option value="">-- Choose a Service --</option>
-    <option value="Physiotherapy">Physiotherapy</option>
-    <option value="Saline at Home">Saline at Home</option>
-    <option value="Post Surgery Care">Post Surgery Care</option>
-    <option value="Elder Care">Elder Care</option>
-    <option value="Medicine Delivery">Medicine Delivery</option>
-    <option value="Home Lab Test">Home Lab Test</option>
-    <option value="Others">Others</option>
-  </select>
-
-  <label for="message">Additional Details</label>
-  <textarea id="message" name="message" placeholder="Describe your issue or preferred time" required></textarea>
-
-  <button type="submit">Submit Request</button>
-</form>
-
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 9523745351 | ✉️ ilaazdhanbad@gmail.com</p>
-    <p>Available 7 days a week across Dhanbad.</p>
-    <a href="https://wa.me/919523745351" class="btn-secondary">Chat on WhatsApp</a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 ILaaz Healthcare, Dhanbad. All Rights Reserved.</p>
+    <p>© 2025 ILaaz Healthcare | Dhanbad</p>
   </footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-

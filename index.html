@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ILaaz - Allopathy | Homeopathy | Home Care</title>
+  <title>ILaaz - Complete Healthcare at Home</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">ILaaz</div>
     <nav>
@@ -19,65 +20,72 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section id="home" class="hero">
-    <h1>Your Health, Our Priority</h1>
-    <p>Comprehensive healthcare at your doorstep — Allopathy | Homeopathy | Physiotherapy | Elder Care</p>
-    <a href="#appointment" class="btn-primary">Book Appointment</a>
+    <div class="hero-content">
+      <h1>Your Health, Our Priority</h1>
+      <p>Consult top doctors in Allopathy, Homeopathy & Physiotherapy — all in one platform.</p>
+      <a href="#appointment" class="btn-primary">Book Appointment</a>
+    </div>
   </section>
 
+  <!-- Services -->
   <section id="services" class="services">
     <h2>Our Services</h2>
     <div class="service-container">
-      <div class="card">
+      <div class="card allopathy">
         <h3>Allopathy Care</h3>
-        <p>Teleconsultation, prescription, medicine delivery, saline & dressing at home.</p>
+        <p>Doctor consultation, diagnostics, medicine delivery, and home nursing support.</p>
       </div>
-      <div class="card">
+      <div class="card homeopathy">
         <h3>Homeopathy Care</h3>
-        <p>Consult with certified homeopathy experts for holistic treatment.</p>
+        <p>Holistic treatment by certified homeopathy doctors for long-term healing.</p>
       </div>
-      <div class="card">
+      <div class="card physio">
         <h3>Physiotherapy</h3>
-        <p>Expert physiotherapists available for home visits and recovery support.</p>
+        <p>Personalized physiotherapy sessions at your home for recovery and mobility.</p>
       </div>
-      <div class="card">
+      <div class="card elder">
         <h3>Elder Care</h3>
-        <p>Specialized care for senior citizens including checkups & wellness monitoring.</p>
+        <p>Comprehensive elder care services including health checkups and monitoring.</p>
       </div>
     </div>
   </section>
 
+  <!-- Appointment Form -->
   <section id="appointment" class="appointment">
-    <h2>Book Your Appointment</h2>
+    <h2>Book an Appointment</h2>
     <form class="form">
       <input type="text" placeholder="Full Name" required />
       <input type="tel" placeholder="Phone Number" required />
       <select required>
-        <option value="">Select Department</option>
+        <option value="">Select Service</option>
         <option value="allopathy">Allopathy</option>
         <option value="homeopathy">Homeopathy</option>
         <option value="physiotherapy">Physiotherapy</option>
-        <option value="eldercare">Elder Care</option>
+        <option value="elder">Elder Care</option>
       </select>
-      <textarea placeholder="Your Message"></textarea>
+      <textarea placeholder="Your Concern / Message"></textarea>
       <button type="submit" class="btn-primary">Submit</button>
     </form>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>📞 Call: <a href="tel:+919523745351">+919523745351</a></p>
-    <p>📍 Dhanbad, Jharkhand</p>
-    <p>💬 Chat with us on WhatsApp</p>
+    <p>📞 <strong>Call:</strong> <a href="tel:+919999999999">+91 99999 99999</a></p>
+    <p>📍 <strong>Address:</strong> Dhanbad, Jharkhand</p>
+    <p>💬 <strong>Chat:</strong> <a href="https://wa.me/919999999999" target="_blank">WhatsApp Us</a></p>
   </section>
 
-  <a href="https://wa.me/919523745351" class="whatsapp-icon" target="_blank">
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/919999999999" class="whatsapp-icon" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
   </a>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 ILaaz Healthcare. All Rights Reserved.</p>
+    <p>© 2025 ILaaz Healthcare | All Rights Reserved</p>
   </footer>
 </body>
 </html>
-

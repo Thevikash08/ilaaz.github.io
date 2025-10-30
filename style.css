@@ -6,262 +6,98 @@
 }
 
 body {
-  background-color: #f8f9fa;
+  background-color: #f5f8fa;
   color: #333;
-  line-height: 1.6;
 }
 
-/* Navbar */
-.navbar {
-  background: #0077b6;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-}
-
-.logo {
-  height: 80px;              /* Bigger and clearer */
-  width: auto;
-  border-radius: 10px;
-  object-fit: contain;       /* Keeps quality intact */
-  filter: brightness(1.2);   /* Makes it more visible */
-  image-rendering: -webkit-optimize-contrast; /* Sharper edges */
-  margin: 5px 15px;
-}
-
-
-
-.call-btn {
-  background: #ffba08;
-  color: black;
-  padding: 8px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(to right, #00b4d8, #0077b6);
+/* Header */
+header {
+  background-color: #0077b6;
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 2rem 1rem;
 }
 
-.hero h2 {
+header h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
-.btn-primary {
-  background: #ffba08;
-  color: #000;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 15px;
+header p {
+  font-size: 1.1rem;
 }
 
-/* Services Section */
+/* Services */
 .services {
-  padding: 50px 20px;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
 .services h2 {
-  margin-bottom: 25px;
+  font-size: 2rem;
   color: #0077b6;
+  margin-bottom: 2rem;
 }
 
-.service-list {
+.service-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .service-card {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-#services {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-#services h2 {
-  font-size: 2em;
-  color: #009688;
-  margin-bottom: 40px;
-}
-
-.services-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.service {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 25px;
-  width: 250px;
-  transition: 0.3s;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.service-icon {
-  font-size: 40px;
-  color: #007bff;
-  margin-bottom: 15px;
-  transition: color 0.3s ease;
-}
-
-.service-card:hover .service-icon {
-  color: #0056b3;
-}
-
-.service:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.service h3 {
-  color: #009688;
-  margin-bottom: 10px;
-}
-
-.service p {
-  color: #555;
-  font-size: 1em;
-}
-.service-tile i {
-  color: #007bff;
-  margin-bottom: 10px;
-}
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-
-.contact-form {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 30px;
-  background: #ffffff;
+  background-color: white;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  font-family: 'Poppins', sans-serif;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-form h2 {
-  text-align: center;
-  color: #0078ff;
-  margin-bottom: 10px;
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.contact-form label {
-  font-weight: 600;
-  color: #333;
+.service-card i {
+  font-size: 2.5rem;
+  color: #0077b6;
+  margin-bottom: 1rem;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  padding: 10px 15px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
+.service-card h3 {
+  font-size: 1.3rem;
+  color: #023e8a;
+  margin-bottom: 0.5rem;
 }
 
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  border-color: #0078ff;
-  box-shadow: 0 0 4px rgba(0,120,255,0.3);
+.service-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: #555;
 }
 
-.contact-form button {
-  background-color: #0078ff;
+button {
+  background-color: #0077b6;
   color: white;
   border: none;
-  padding: 12px;
-  font-size: 17px;
-  border-radius: 8px;
+  padding: 0.7rem 1.3rem;
+  border-radius: 25px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #005fcc;
+button:hover {
+  background-color: #0096c7;
 }
 
 /* Footer */
 footer {
-  background: #023e8a;
+  background-color: #023e8a;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 1rem;
+  margin-top: 2rem;
   font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar h1 {
-    font-size: 1rem;
-  }
-
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-}
-/* Floating WhatsApp Chat Button */
-.whatsapp-chat {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 15px;
-  text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.whatsapp-chat img {
-  width: 30px;
-  height: 30px;
-}
-
-.whatsapp-chat span {
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.whatsapp-chat:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* ✅ Teleconsultation Icon Fix */
-.service-tile i {
-  color: #007bff;
-  margin-bottom: 10px;
 }

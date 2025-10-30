@@ -3,89 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ILaaz - Complete Healthcare at Home</title>
+  <title>ILaaz - Your Health, Our Priority</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
-
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">ILaaz</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#appointment">Appointment</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>ILaaz</h1>
+      <p>Your Health, Our Priority</p>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
     <div class="hero-content">
-      <h1>Your Health, Our Priority</h1>
-      <p>Consult top doctors in Allopathy, Homeopathy & Physiotherapy — all in one platform.</p>
-      <a href="#appointment" class="btn-primary">Book Appointment</a>
+      <h2>Comprehensive Healthcare at Your Doorstep</h2>
+      <p>Allopathy • Homeopathy • Physiotherapy • Medicine Delivery • Saline & Elder Care</p>
+      <a href="#services" class="btn">Explore Services</a>
     </div>
   </section>
 
   <!-- Services -->
   <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-container">
-      <div class="card allopathy">
-        <h3>Allopathy Care</h3>
-        <p>Doctor consultation, diagnostics, medicine delivery, and home nursing support.</p>
+    <h2 data-aos="fade-down">Our Services</h2>
+    <div class="service-grid">
+      <div class="card" data-aos="zoom-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Doctor Icon">
+        <h3>Allopathy Consultation</h3>
+        <p>Consult experienced doctors for your health needs — both online and offline.</p>
       </div>
-      <div class="card homeopathy">
+      <div class="card" data-aos="zoom-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/3159/3159310.png" alt="Homeopathy Icon">
         <h3>Homeopathy Care</h3>
-        <p>Holistic treatment by certified homeopathy doctors for long-term healing.</p>
+        <p>Gentle and holistic treatments for long-lasting natural healing.</p>
       </div>
-      <div class="card physio">
+      <div class="card" data-aos="zoom-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" alt="Physiotherapy Icon">
         <h3>Physiotherapy</h3>
-        <p>Personalized physiotherapy sessions at your home for recovery and mobility.</p>
+        <p>Expert physiotherapy at home — regain strength, mobility, and confidence.</p>
       </div>
-      <div class="card elder">
-        <h3>Elder Care</h3>
-        <p>Comprehensive elder care services including health checkups and monitoring.</p>
+      <div class="card" data-aos="zoom-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" alt="Medicine Delivery Icon">
+        <h3>Medicine Delivery</h3>
+        <p>Fast and reliable medicine delivery right to your home.</p>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320349.png" alt="Nursing Icon">
+        <h3>Saline & Home Care</h3>
+        <p>Professional nurses for saline, dressing, and routine home healthcare.</p>
       </div>
     </div>
   </section>
 
-  <!-- Appointment Form -->
-  <section id="appointment" class="appointment">
-    <h2>Book an Appointment</h2>
-    <form class="form">
-      <input type="text" placeholder="Full Name" required />
-      <input type="tel" placeholder="Phone Number" required />
-      <select required>
-        <option value="">Select Service</option>
-        <option value="allopathy">Allopathy</option>
-        <option value="homeopathy">Homeopathy</option>
-        <option value="physiotherapy">Physiotherapy</option>
-        <option value="elder">Elder Care</option>
-      </select>
-      <textarea placeholder="Your Concern / Message"></textarea>
-      <button type="submit" class="btn-primary">Submit</button>
-    </form>
-  </section>
-
   <!-- Contact -->
-  <section id="contact" class="contact">
+  <section class="contact" data-aos="fade-up">
     <h2>Contact Us</h2>
-    <p>📞 <strong>Call:</strong> <a href="tel:+919999999999">+91 99999 99999</a></p>
-    <p>📍 <strong>Address:</strong> Dhanbad, Jharkhand</p>
-    <p>💬 <strong>Chat:</strong> <a href="https://wa.me/919999999999" target="_blank">WhatsApp Us</a></p>
+    <p>📞 <a href="tel:+919523745351">+91 9523745351</a></p>
+    <p>📍 Dhanbad, Jharkhand</p>
+    <p>💬 Chat on WhatsApp for instant support!</p>
   </section>
 
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/919999999999" class="whatsapp-icon" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-  </a>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919523745351" class="whatsapp-float" target="_blank">💬</a>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 ILaaz Healthcare | All Rights Reserved</p>
   </footer>
+
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
 </body>
 </html>
